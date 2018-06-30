@@ -1,0 +1,12 @@
+highlighter: rouge
+github: [Repository metadata]
+
+baseurl: "https://kristenzirkler.github.io/jack-grace-custom-code"
+
+livereload: true
+
+# Sass
+sass:
+  sass_dir: scss
+  style: :expanded
+  line_numbers: true
