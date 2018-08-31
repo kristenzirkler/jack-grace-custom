@@ -4,350 +4,312 @@ title: Map
 slug: map
 path: ../
 ---
-<style>
-/*
-teal: #42d6c3;
-lightgray: #f7f8fa;
-*/
-#mapshadow {
-	fill: #eee;
-}
-.map-state {
-	fill: #f7f8fa;
-	stroke: #42d6c3;
-}
-.map-state:hover, .map-state--hover {
-	fill: #42d6c3;
-}
-.map-state--inactive,
-.map-state--inactive:hover,
-.map-state--inactive.map-state--hover {
-	fill: #f7f8fa;
-}
-.map-label.map-label--inactive {
-	fill: #ccc; /*font-color*/
-}
-.lake {
-	fill: #d2edf7;
-}
-.map-label {
-	font-family: 'Roboto', sans-serif;
-	font-size: 10px;
-	margin-top: 20px;
-	text-align: center;
-	fill: #777777; /*font-color*/
-}
-.map-label--inactive, .map-state--inactive {
-	cursor: default;
-}
-</style>
-
 <script type="text/javascript">
 var mapstate_config = {
 	'mapstate_1':{
 		'name': 'ALABAMA',
-		'url':'/alabama/',
+		'url':'/collections/alabama',
 		'active':true,
 		'abbr':'al',
 	},
 	'mapstate_2':{
 		'name': 'ALASKA',
-		'url':'/alaska/',
+		'url':'/collections/alaska',
 		'active':false,
 		'abbr':'ak',
 	},
 	'mapstate_3':{
 		'name': 'ARIZONA',
-		'url':'/arizona/',
-		'active':false,
+		'url':'/collections/arizona',
+		'active':true,
 		'abbr':'az',
 	},
 	'mapstate_4':{
 		'name': 'ARKANSAS',
-		'url':'/arkansas/',
-		'active':true,
+		'url':'/collections/arkansas',
+		'active':false,
 		'abbr':'ar',
 	},
 	'mapstate_5':{
 		'name': 'CALIFORNIA',
-		'url':'/california/',
+		'url':'/collections/california',
 		'active':true,
 		'abbr':'ca',
 	},
 	'mapstate_6':{
 		'name': 'COLORADO',
-		'url':'/colorado/',
+		'url':'/collections/colorado',
 		'active':true,
 		'abbr':'co',
 	},
 	'mapstate_7':{
 		'name': 'CONNECTICUT',
-		'url':'/connecticut/',
+		'url':'/collections/connecticut',
 		'active':true,
 		'abbr':'ct',
 	},
 	'mapstate_8':{
 		'name': 'DELAWARE',
-		'url':'/delaware/',
+		'url':'/collections/delaware',
 		'active':true,
 		'abbr':'de',
 	},
 	'mapstate_9':{
 		'name': 'FLORIDA',
-		'url':'/florida/',
+		'url':'/collections/florida',
 		'active':true,
 		'abbr':'fl',
 	},
 	'mapstate_10':{
 		'name': 'GEORGIA',
-		'url':'/georgia/',
+		'url':'/collections/georgia',
 		'active':true,
 		'abbr':'ga',
 	},
 	'mapstate_11':{
 		'name': 'HAWAII',
-		'url':'/hawaii/',
+		'url':'/collections/hawaii',
 		'active':true,
 		'abbr':'hi',
 	},
 	'mapstate_12':{
 		'name': 'IDAHO',
-		'url':'/idaho/',
-		'active':true,
+		'url':'/collections/idaho',
+		'active':false,
 		'abbr':'id',
 	},
 	'mapstate_13':{
 		'name': 'ILLINOIS',
-		'url':'/illinois/',
+		'url':'/collections/illinois',
 		'active':true,
 		'abbr':'il',
 	},
 	'mapstate_14':{
 		'name': 'INDIANA',
-		'url':'/indiana/',
-		'active':true,
+		'url':'/collections/indiana',
+		'active':false,
 		'abbr':'in',
 	},
 	'mapstate_15':{
 		'name': 'IOWA',
-		'url':'/iowa/',
-		'active':true,
+		'url':'/collections/iowa',
+		'active':false,
 		'abbr':'ia',
 	},
 	'mapstate_16':{
 		'name': 'KANSAS',
-		'url':'/kansas/',
-		'active':true,
+		'url':'/collections/kansas',
+		'active':false,
 		'abbr':'ks',
 	},
 	'mapstate_17':{
 		'name': 'KENTUCKY',
-		'url':'/kentucky/',
-		'active':true,
+		'url':'/collections/kentucky',
+		'active':false,
 		'abbr':'ky',
 	},
 	'mapstate_18':{
 		'name': 'LOUISIANA',
-		'url':'/louisiana/',
-		'active':true,
+		'url':'/collections/louisiana',
+		'active':false,
 		'abbr':'la',
 	},
 	'mapstate_19':{
 		'name': 'MAINE',
-		'url':'/maine/',
-		'active':true,
+		'url':'/collections/maine',
+		'active':false,
 		'abbr':'me',
 	},
 	'mapstate_20':{
 		'name': 'MARYLAND',
-		'url':'/maryland/',
+		'url':'/collections/maryland',
 		'active':true,
 		'abbr':'md',
 	},
 	'mapstate_21':{
 		'name': 'MASSACHUSETTS',
-		'url':'/massachusetts/',
-		'active':true,
+		'url':'/collections/massachusetts',
+		'active':false,
 		'abbr':'ma',
 	},
 	'mapstate_22':{
 		'name': 'MICHIGAN',
-		'url':'/michigan/',
-		'active':true,
+		'url':'/collections/michigan',
+		'active':false,
 		'abbr':'mi',
 	},
 	'mapstate_23':{
 		'name': 'MINNESOTA',
-		'url':'/minnesota/',
-		'active':true,
+		'url':'/collections/minnesota',
+		'active':false,
 		'abbr':'mn',
 	},
 	'mapstate_24':{
 		'name': 'MISSISSIPPI',
-		'url':'/mississippi/',
-		'active':true,
+		'url':'/collections/mississippi',
+		'active':false,
 		'abbr':'ms',
 	},
 	'mapstate_25':{
 		'name': 'MISSOURI',
-		'url':'/missouri/',
+		'url':'/collections/missouri',
 		'active':true,
 		'abbr':'mo',
 	},
 	'mapstate_26':{
 		'name': 'MONTANA',
-		'url':'/montana/',
-		'active':true,
+		'url':'/collections/montana',
+		'active':false,
 		'abbr':'mt',
 	},
 	'mapstate_27':{
 		'name': 'NEBRASKA',
-		'url':'/nebraska/',
-		'active':true,
+		'url':'/collections/nebraska',
+		'active':false,
 		'abbr':'ne',
 	},
 	'mapstate_28':{
 		'name': 'NEVADA',
-		'url':'/nevada/',
-		'active':true,
+		'url':'/collections/nevada',
+		'active':false,
 		'abbr':'nv',
 	},
 	'mapstate_29':{
 		'name': 'NEW HAMPSHIRE',
-		'url':'/new-hampshire/',
+		'url':'/collections/new-hampshire',
 		'active':true,
 		'abbr':'nh',
 	},
 	'mapstate_30':{
 		'name': 'NEW JERSEY',
-		'url':'/new-jersey/',
-		'active':true,
+		'url':'/collections/new-jersey',
+		'active':false,
 		'abbr':'nj',
 	},
 	'mapstate_31':{
 		'name': 'NEW MEXICO',
-		'url':'/new-mexico/',
-		'active':true,
+		'url':'/collections/new-mexico',
+		'active':false,
 		'abbr':'nm',
 	},
 	'mapstate_32':{
 		'name': 'NEW YORK',
-		'url':'/new-york/',
-		'active':true,
+		'url':'/collections/new-york',
+		'active':false,
 		'abbr':'ny',
 	},
 	'mapstate_33':{
 		'name': 'NORTH CAROLINA',
-		'url':'/north-carolina/',
-		'active':true,
+		'url':'/collections/north-carolina',
+		'active':false,
 		'abbr':'nc',
 	},
 	'mapstate_34':{
 		'name': 'NORTH DAKOTA',
-		'url':'/north-dakota/',
-		'active':true,
+		'url':'/collections/north-dakota',
+		'active':false,
 		'abbr':'nd',
 	},
 	'mapstate_35':{
 		'name': 'OHIO',
-		'url':'/ohio/',
-		'active':true,
+		'url':'/collections/ohio',
+		'active':false,
 		'abbr':'oh',
 	},
 	'mapstate_36':{
 		'name': 'OKLAHOMA',
-		'url':'/oklahoma/',
-		'active':true,
+		'url':'/collections/oklahoma',
+		'active':false,
 		'abbr':'ok',
 	},
 	'mapstate_37':{
 		'name': 'OREGON',
-		'url':'/oregon/',
-		'active':true,
+		'url':'/collections/oregon',
+		'active':false,
 		'abbr':'or',
 	},
 	'mapstate_38':{
 		'name': 'PENNSYLVANIA',
-		'url':'/pennsylvania/',
-		'active':true,
+		'url':'/collections/pennsylvania',
+		'active':false,
 		'abbr':'pa',
 	},
 	'mapstate_39':{
 		'name': 'RHODE ISLAND',
-		'url':'/rhode-island/',
+		'url':'/collections/rhode-island',
 		'active':false,
 		'abbr':'ri',
 	},
 	'mapstate_40':{
 		'name': 'SOUTH CAROLINA',
-		'url':'/south-carolina/',
+		'url':'/collections/south-carolina',
 		'active':true,
 		'abbr':'sc',
 	},
 	'mapstate_41':{
 		'name': 'SOUTH DAKOTA',
-		'url':'/south-dakota/',
-		'active':true,
+		'url':'/collections/south-dakota',
+		'active':false,
 		'abbr':'sd',
 	},
 	'mapstate_42':{
 		'name': 'TENNESSEE',
-		'url':'/tennessee/',
-		'active':true,
+		'url':'/collections/tennessee',
+		'active':false,
 		'abbr':'tn',
 	},
 	'mapstate_43':{
 		'name': 'TEXAS',
-		'url':'/texas/',
+		'url':'/collections/texas',
 		'active':true,
 		'abbr':'tx',
 	},
 	'mapstate_44':{
 		'name': 'UTAH',
-		'url':'/utah/',
+		'url':'/collections/utah',
 		'active':true,
 		'abbr':'ut',
 	},
 	'mapstate_45':{
 		'name': 'VERMONT',
-		'url':'/vermont/',
+		'url':'/collections/vermont',
 		'active':false,
 		'abbr':'vt',
 	},
 	'mapstate_46':{
 		'name': 'VIRGINIA ',
-		'url':'/virginia/',
-		'active':true,
+		'url':'/collections/virginia',
+		'active':false,
 		'abbr':'va',
 	},
 	'mapstate_47':{
 		'name': 'WASHINGTON',
-		'url':'/washington/',
-		'active':true,
+		'url':'/collections/washington',
+		'active':false,
 		'abbr':'wa',
 	},
 	'mapstate_48':{
 		'name': 'WEST VIRGINIA',
-		'url':'/west-virginia/',
-		'active':true,
+		'url':'/collections/west-virginia',
+		'active':false,
 		'abbr':'wv',
 	},
 	'mapstate_49':{
 		'name': 'WISCONSIN',
-		'url':'/wisconsin/',
-		'active':true,
+		'url':'/collections/wisconsin',
+		'active':false,
 		'abbr':'wi',
 	},
 	'mapstate_50':{
 		'name': 'WYOMING',
-		'url':'/wyoming/',
-		'active':true,
+		'url':'/collections/wyoming',
+		'active':false,
 		'abbr':'wy',
 	},
 	'mapstate_51':{
 		'name': 'DISTRICT OF COLUMBIA',
-		'url':'/district-of-columbia/',
-		'active':true,
+		'url':'/collections/district-of-columbia',
+		'active':false,
 		'abbr':'dc',
 	},
 }
@@ -518,3 +480,41 @@ $(document).ready(function(){
 	});
 });
 </script>
+
+<style>
+/*
+teal: #42d6c3;
+lightgray: #f7f8fa;
+*/
+#mapshadow {
+	fill: #eee;
+}
+.map-state {
+	fill: #f7f8fa;
+	stroke: #ddd;
+}
+.map-state:hover, .map-state--hover {
+	fill: #42d6c3;
+}
+.map-state--inactive,
+.map-state--inactive:hover,
+.map-state--inactive.map-state--hover {
+	fill: #f7f8fa;
+}
+.map-label.map-label--inactive {
+	fill: #ccc; /*font-color*/
+}
+.lake {
+	fill: #d2edf7;
+}
+.map-label {
+	font-family: 'Roboto', sans-serif;
+	font-size: 10px;
+	margin-top: 20px;
+	text-align: center;
+	fill: #777; /*font-color*/
+}
+.map-label--inactive, .map-state--inactive {
+	cursor: default;
+}
+</style>
